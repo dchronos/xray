@@ -19,6 +19,7 @@ function xray_help($path, $arg) {
 * Implementation of hook_form_alter().
 */
 function xray_form_alter(&$form, &$form_state, $form_id) {
+  //dsm($form,'form');
   $form['xray_display_form_id'] = array(
     '#type' => 'item',
     '#title' => t('Form ID'),
