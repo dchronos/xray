@@ -1,0 +1,19 @@
+<?php
+
+/**
+* @file
+* Helps site builders and module developers investigate a site.
+*/
+
+/**
+* Implementation of hook_form_alter().
+*/
+function xray_form_alter() {
+  $form['xray_display_form_id'] = array(
+    '#type' => 'item',
+    '#title' => t('Form ID'),
+    '#markup' => $form_id,
+    '#weight' => -100,
+  );
+}
+
