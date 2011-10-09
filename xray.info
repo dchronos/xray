@@ -1,0 +1,3 @@
+name = X-ray
+description = Mostra a estrutura interna e conexões de um website.
+core = 7.x
