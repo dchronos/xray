@@ -5,10 +5,21 @@
 * Helps site builders and module developers investigate a site.
 */
 
+
+/**
+* Implementation of hook_help().
+*/
+function xray_help($path, $arg) {
+  if ($path == 'admin/structure') {
+    return t('This site has stuff!');
+  } 
+}
+
 /**
 * Implementation of hook_form_alter().
 */
-function xray_form_alter() {
+function xray_form_alter(&$form, &$form_state, $form_id) {
+  //dsm($form,'form');
   $form['xray_display_form_id'] = array(
     '#type' => 'item',
     '#title' => t('Form ID'),
